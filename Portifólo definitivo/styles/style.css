@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --fundo-principal: #161032;
+    --deco1: #596157;
+    --letra1: #080808;
+    --letra2: #ffff;
+    --deco2: #03543A;
+    --deco3: #8a12a1;
+    --deco4: #077e58;
+    --fonte-texto:"Google Sans", sans-serif;
+    --fonte-h1: "Google Sans Code", monospace;
+}
+
+body {
+    background-color:var(--fundo-principal) ;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+header {
+    background-color: var(--deco1);
+}
+
+header ul {
+    display: flex;
+    gap: 30px;
+    padding: 25px;
+    justify-content: flex-end;
+    list-style-type: none;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+header a {
+    color: var(--letra2);
+    text-decoration: none;
+    font-family:var(--fonte-texto);
+    font-size: 1.2rem;
+    padding: 7px;
+}
+
+header a:hover {
+    background-color: var(--deco1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.473);
+}
+
+section#painel {
+    display: flex;
+    column-gap: 2rem;
+    color: var(--letra2);
+    max-width: 1000px;
+    margin-left: 2rem;
+}
+
+#painel h1 {
+    font-family: "Arvo", serif;
+}
+
+#painel img {
+    width: 300px;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0);
+    transition: ease outline .2s;
+    height: 300px;
+}
+
+#painel img:hover {
+    outline: 4px solid var(--letra2);
+}
+
+#painel p {
+    font-family: var(--fonte-texto);
+    font-size: 1.2em;
+}
+
+.sobre-mim {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+
+
+footer {
+    background-image: linear-gradient(var(--deco2), var(--deco4));
+    display: flex;
+    padding: 10px;
+    justify-content: space-evenly;
+    margin-top: 100rem;
+}
+
+footer a {
+    color: var(--letra2);
+    text-decoration: none;
+    font-family: var(--fonte-h1);
+}
+footer img {
+    width: 3rem;
+}
