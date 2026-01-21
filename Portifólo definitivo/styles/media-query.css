@@ -1,0 +1,51 @@
+@media screen and (min-width:650px){
+    #btn-left {
+        left: 5rem;
+    }
+
+    #btn-right {
+        right: 5rem;
+    }
+.projects-icons img {
+    width: 400px;
+    transition: 0.3s;
+}
+
+.projects-icons img:hover {
+    width: 410px;
+    box-shadow: 2px 2px 30px var(--deco3);
+}
+#painel>img {
+    width: 300px;
+    height: 300px;
+}
+
+#painel p {
+    font-family: var(--fonte-texto);
+    font-size: 1.2rem;
+}
+
+header {
+    height: 80px;
+}
+header a {
+    font-size: 1.2rem;
+    
+}
+header ul {
+    gap: 50px;
+}
+    section#painel {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width:1070px){
+    #btn-left {
+        left: 10rem;
+    }
+
+    #btn-right {
+        right: 10rem;
+    }
+}

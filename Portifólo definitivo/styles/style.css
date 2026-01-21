@@ -6,103 +6,407 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --fundo-principal: #161032;
     --deco1: #596157;
     --letra1: #080808;
     --letra2: #ffff;
-    --deco2: #03543A;
-    --deco3: #8a12a1;
-    --deco4: #077e58;
-    --fonte-texto:"Google Sans", sans-serif;
+    --deco2: #D5E5F4;
+    --deco3: #4bb7c1d0;
+    --deco4: #2D587A;
+    --deco5: #206fac57;
+    --fonte-texto: "Google Sans", sans-serif;
     --fonte-h1: "Google Sans Code", monospace;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
-    background-color:var(--fundo-principal) ;
+    background-color: var(--fundo-principal);
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
+    color: var(--deco2);
 }
 
 header {
-    background-color: var(--deco1);
+    background-image: linear-gradient(#2D587A, #206fac57);
+    position: sticky;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
 header ul {
+    height: 100%;
     display: flex;
-    gap: 30px;
-    padding: 25px;
+    gap: 12px;
+    padding: 20px;
     justify-content: flex-end;
     list-style-type: none;
     align-items: center;
+    justify-content: center;
     flex-flow: row wrap;
+    margin: 10px 0px;
 }
 
 header a {
     color: var(--letra2);
     text-decoration: none;
-    font-family:var(--fonte-texto);
-    font-size: 1.2rem;
-    padding: 7px;
+    font-family: var(--fonte-texto);
+    font-size: 1rem;
+    padding-bottom: 8px;
 }
 
 header a:hover {
-    background-color: var(--deco1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.473);
+    border-bottom: 2px solid var(--deco3);
 }
 
 section#painel {
     display: flex;
+    flex-direction: column;
     column-gap: 2rem;
     color: var(--letra2);
     max-width: 1000px;
-    margin-left: 2rem;
+    margin: 0px 1rem;
+    align-items: center;
 }
 
 #painel h1 {
     font-family: "Arvo", serif;
 }
 
-#painel img {
-    width: 300px;
+#painel>img {
+    width: 200px;
     border-radius: 50%;
     border: 5px solid rgba(255, 255, 255, 0);
     transition: ease outline .2s;
-    height: 300px;
+    height: 200px;
 }
 
-#painel img:hover {
-    outline: 4px solid var(--letra2);
+#painel>img:hover {
+    outline: 4px solid var(--deco3);
 }
 
 #painel p {
     font-family: var(--fonte-texto);
-    font-size: 1.2em;
+    font-size: 1rem;
 }
 
 .sobre-mim {
-    padding-top: 1rem;
+    padding-top: 2.5rem;
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
+    row-gap: 10px;
+    text-shadow: 2px 2px 5px #0c69c0d8;
+}
+
+.sobre-mim p {
+    color: var(--deco3);
+    margin-left: 0px;
+}
+
+.sobre-mim>p {
+    margin-bottom: 8px;
 }
 
 
-
-footer {
-    background-image: linear-gradient(var(--deco2), var(--deco4));
+.minhas-redes {
     display: flex;
-    padding: 10px;
-    justify-content: space-evenly;
-    margin-top: 100rem;
 }
 
-footer a {
-    color: var(--letra2);
-    text-decoration: none;
-    font-family: var(--fonte-h1);
+.minhas-redes a {
+    margin-top: 2px;
+    margin-right: 1rem;
 }
-footer img {
-    width: 3rem;
+
+.minhas-redes img {
+    width: 2rem;
+}
+
+.minhas-redes img:hover {
+    background-color: #2d597a7c;
+    border-radius: 8px;
+}
+
+#my-projects {
+    background-image: linear-gradient(#2D587A, #206fac57);
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    padding-top: 2rem;
+}
+
+#my-projects h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    padding: 5px 0px;
+    border-top: 2px solid var(--deco3);
+    border-bottom: 2px solid var(--deco3);
+}
+
+
+#my-projects p {
+    text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+#my-projects h1:hover {
+    text-shadow: 1px 1px 10px var(--deco3);
+}
+
+#my-projects p:hover {
+    text-shadow: 1px 1px 10px var(--deco3);
+}
+
+.projects-icons {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row nowrap;
+    gap: 1rem;
+    overflow-y: hidden;
+    overflow-x: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+.projects-icons img {
+    width: 300px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    scroll-behavior: smooth;
+    border: 5px solid #2d597a7a;
+    transition: 0.3s;
+}
+
+.projects-icons img:hover {
+    width: 310px;
+    box-shadow: 2px 2px 30px var(--deco3);
+}
+
+.projects-icons::-webkit-scrollbar {
+    display: none;
+}
+
+#my-graduation {
+    background-image: linear-gradient(#2D587A, #206fac57);
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    scroll-margin-top: 80px;
+}
+
+.lista-opt-grad {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 10rem;
+    padding-bottom: 5rem;
+}
+
+.lista-opt-grad h1,
+p {
+    margin-bottom: 2px;
+}
+
+.desc-grad {
+    padding-top: 2rem;
+}
+
+.desc-grad h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    padding: 5px 0px;
+    border-top: 2px solid var(--deco3);
+    border-bottom: 2px solid var(--deco3);
+}
+
+.desc-grad p {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.opt-grad-left {
+    padding-left: 20px;
+    height: auto;
+    border-left: 2px solid rgb(119, 119, 243);
+    margin: 15px;
+    text-align: start;
+    transition: 0.2s ease;
+}
+
+.opt-grad-right {
+    height: auto;
+    border-right: 2px solid rgb(119, 119, 243);
+    margin: 15px;
+    text-align: end;
+    padding-right: 20px;
+    transition: 0.2s ease;
+}
+
+.opt-grad-left:hover {
+    border-left: 10px solid rgb(119, 119, 243);
+    text-shadow: 2px 2px 10px var(--deco3);
+    background-color: #4970ee10;
+}
+
+.opt-grad-right:hover {
+    border-right: 10px solid rgb(119, 119, 243);
+    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.822);
+    background-color: #be4e5417;
+}
+
+
+#my-skills {
+    background-image: linear-gradient(#2D587A, #206fac57);
+}
+
+.lista-opt-skill {
+    text-align: center;
+    height: 23rem;
+    margin-bottom: 12rem;
+    position: relative;
+}
+
+.opt-skill {
+    display: none;
+    transition: 2s ease;
+}
+
+
+.opt-skill img {
+    width: 15rem;
+    transition: 0.5s ease;
+}
+
+.opt-skill img:hover {
+    width: 17rem;
+}
+
+.on {
+    display: block;
+}
+
+.on img {
+    width: 15rem;
+    transition: 0.5s ease;
+}
+
+.on img:hover {
+    width: 17rem;
+    transition: 0.5s ease;
+}
+
+#btn-left {
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.13);
+    font-size: 2rem;
+    text-align: center;
+    width: 4rem;
+    height: 4.2rem;
+    color: var(--deco2);
+    background-color: var(--deco5);
+    border-radius: 40%;
+    transition: 0.5s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-100%);
+    left: 1rem;
+}
+
+
+#btn-left:hover {
+    transform: translateY(-100%) translateX(-5px);
+}
+
+#btn-right:hover {
+    transform: translateY(-100%) translateX(5px);
+}
+
+#btn-right {
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.13);
+    font-size: 2rem;
+    text-align: center;
+    width: 4rem;
+    height: 4.2rem;
+    color: var(--deco2);
+    background-color: var(--deco5);
+    border-radius: 40%;
+    transition: 0.5s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-100%);
+    right: 1rem;
+}
+
+section[id] {
+    scroll-margin-top: 100px;
+}
+
+#my-contacts {
+    background-image: linear-gradient(#2D587A, #206fac57);
+    padding-bottom: 2rem;
+}
+
+.opt-cont-1,
+.opt-cont-2 {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    transition: 0.5s;
+}
+
+.opt-cont-1 h1:hover,
+img:hover {
+    text-shadow: 2px 2px 10px rgb(8, 182, 8);
+}
+
+.opt-cont-1 p,
+.opt-cont-2 p {
+    margin-top: 20px;
+}
+
+.opt-cont-1 p:hover,
+.opt-cont-2 p:hover {
+    font-size: 1.5rem;
+}
+
+.opt-cont-1 img,
+.opt-cont-2 img {
+    width: 30px;
+}
+
+.opt-cont-1 a,
+.opt-cont-2 a {
+    text-decoration: none;
+    color: var(--deco2);
+}
+
+.opt-cont-1 a:hover,
+.opt-cont-2 a:hover {
+    color: var(--deco3);
+    text-decoration: underline;
+}
+
+.opt-cont-2 h1:hover,
+img:hover {
+    text-shadow: 2px 2px 10px rgb(172, 21, 29);
 }
